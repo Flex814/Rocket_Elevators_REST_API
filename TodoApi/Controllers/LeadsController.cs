@@ -13,8 +13,8 @@ namespace TodoApi.Controllers
     [Route("[controller]")]
     public class LeadsController : Controller
     {
-        private readonly app_developmentContext _context;
-        public LeadsController(app_developmentContext context)
+        private readonly jacobgomezContext _context;
+        public LeadsController(jacobgomezContext context)
         {
             _context = context;
         }
@@ -41,7 +41,7 @@ namespace TodoApi.Controllers
 
             var leads = _context.Leads.ToList();
             var customers = _context.Customers.ToList();
-            List<Leads> recent_leads = new List<Leads>();
+            List<Lead> recent_leads = new List<Lead>();
 
             DateTime currentDate = DateTime.Now.AddDays(-30);
             Boolean found;

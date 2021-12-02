@@ -29,7 +29,7 @@ namespace TodoApi
             var serverVersion = new MySqlServerVersion(new Version(5, 0));
             // services.AddDbContext<app_developmentContext>(options =>
             //         options.UseSqlServer(Configuration.GetConnectionString("dbstring")));
-            services.AddDbContext<app_developmentContext>(opt =>
+            services.AddDbContext<jacobgomezContext>(opt =>
                     opt.UseMySql(dbstring, serverVersion));
             services.AddMvc();
             services.AddControllers();

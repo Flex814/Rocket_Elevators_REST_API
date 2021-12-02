@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace TodoApi
+namespace TodoApi.Models
 {
-    public partial class Leads
+    public partial class Lead
     {
         public long Id { get; set; }
         public string FullName { get; set; }
@@ -21,6 +21,5 @@ namespace TodoApi
         public DateTime UpdatedAt { get; set; }
         public DateTime? CreatedOn { get; set; }
         public string Filename { get; set; }
-
     }
 }

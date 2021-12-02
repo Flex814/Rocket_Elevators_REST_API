@@ -3,10 +3,15 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace TodoApi
+namespace TodoApi.Models
 {
     public partial class Elevator
     {
+        public Elevator()
+        {
+            Interventions = new HashSet<Intervention>();
+        }
+
         public long Id { get; set; }
         public string SerialNumber { get; set; }
         public string Model { get; set; }
@@ -21,5 +26,6 @@ namespace TodoApi
         public long? ColumnId { get; set; }
 
         public virtual Column Column { get; set; }
+        public virtual ICollection<Intervention> Interventions { get; set; }
     }
 }

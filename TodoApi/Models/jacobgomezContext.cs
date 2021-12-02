@@ -4,15 +4,15 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 #nullable disable
 
-namespace TodoApi
+namespace TodoApi.Models
 {
-    public partial class app_developmentContext : DbContext
+    public partial class jacobgomezContext : DbContext
     {
-        public app_developmentContext()
+        public jacobgomezContext()
         {
         }
 
-        public app_developmentContext(DbContextOptions<app_developmentContext> options)
+        public jacobgomezContext(DbContextOptions<jacobgomezContext> options)
             : base(options)
         {
         }
@@ -26,7 +26,8 @@ namespace TodoApi
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Elevator> Elevators { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
-        public virtual DbSet<Leads> Leads { get; set; }
+        public virtual DbSet<Intervention> Interventions { get; set; }
+        public virtual DbSet<Lead> Leads { get; set; }
         public virtual DbSet<Quote> Quotes { get; set; }
         public virtual DbSet<SchemaMigration> SchemaMigrations { get; set; }
         public virtual DbSet<User> Users { get; set; }
@@ -35,8 +36,8 @@ namespace TodoApi
         {
             if (!optionsBuilder.IsConfigured)
             {
-// #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseMySql("server=localhost;database=dominhannguyen;user=root;password=Password123!@#;treattinyasboolean=true", Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.27-mysql"));
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                optionsBuilder.UseMySql("server=codeboxx.cq6zrczewpu2.us-east-1.rds.amazonaws.com;port=3306;database=jacobgomez;uid=codeboxx;password=Codeboxx1!", Microsoft.EntityFrameworkCore.ServerVersion.Parse("5.7.33-mysql"));
             }
         }
 
@@ -48,7 +49,9 @@ namespace TodoApi
             {
                 entity.ToTable("addresses");
 
-                entity.Property(e => e.Id).HasColumnName("id");
+                entity.Property(e => e.Id)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("id");
 
                 entity.Property(e => e.AddressType)
                     .HasMaxLength(255)
@@ -129,13 +132,17 @@ namespace TodoApi
 
                 entity.HasIndex(e => e.EmployeeId, "index_batteries_on_employee_id");
 
-                entity.Property(e => e.Id).HasColumnName("id");
+                entity.Property(e => e.Id)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("id");
 
                 entity.Property(e => e.BatteryType)
                     .HasMaxLength(255)
                     .HasColumnName("battery_type");
 
-                entity.Property(e => e.BuildingId).HasColumnName("building_id");
+                entity.Property(e => e.BuildingId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("building_id");
 
                 entity.Property(e => e.CertificateOfOperations)
                     .HasMaxLength(255)
@@ -153,7 +160,9 @@ namespace TodoApi
                     .HasColumnType("date")
                     .HasColumnName("date_of_last_inspection");
 
-                entity.Property(e => e.EmployeeId).HasColumnName("employee_id");
+                entity.Property(e => e.EmployeeId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("employee_id");
 
                 entity.Property(e => e.Information)
                     .HasMaxLength(255)
@@ -192,9 +201,13 @@ namespace TodoApi
 
                 entity.HasIndex(e => e.CustomerId, "index_buildings_on_customer_id");
 
-                entity.Property(e => e.Id).HasColumnName("id");
+                entity.Property(e => e.Id)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("id");
 
-                entity.Property(e => e.AddressId).HasColumnName("address_id");
+                entity.Property(e => e.AddressId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("address_id");
 
                 entity.Property(e => e.AdminEmail)
                     .HasMaxLength(255)
@@ -212,7 +225,9 @@ namespace TodoApi
                     .HasColumnType("datetime")
                     .HasColumnName("created_at");
 
-                entity.Property(e => e.CustomerId).HasColumnName("customer_id");
+                entity.Property(e => e.CustomerId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("customer_id");
 
                 entity.Property(e => e.TechEmail)
                     .HasMaxLength(255)
@@ -249,9 +264,13 @@ namespace TodoApi
 
                 entity.HasIndex(e => e.BuildingId, "index_building_details_on_building_id");
 
-                entity.Property(e => e.Id).HasColumnName("id");
+                entity.Property(e => e.Id)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("id");
 
-                entity.Property(e => e.BuildingId).HasColumnName("building_id");
+                entity.Property(e => e.BuildingId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("building_id");
 
                 entity.Property(e => e.CreatedAt)
                     .HasColumnType("datetime")
@@ -282,9 +301,13 @@ namespace TodoApi
 
                 entity.HasIndex(e => e.BatteryId, "index_columns_on_battery_id");
 
-                entity.Property(e => e.Id).HasColumnName("id");
+                entity.Property(e => e.Id)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("id");
 
-                entity.Property(e => e.BatteryId).HasColumnName("battery_id");
+                entity.Property(e => e.BatteryId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("battery_id");
 
                 entity.Property(e => e.ColumnType)
                     .HasMaxLength(255)
@@ -302,7 +325,9 @@ namespace TodoApi
                     .HasColumnType("text")
                     .HasColumnName("notes");
 
-                entity.Property(e => e.NumberOfFloor).HasColumnName("number_of_floor");
+                entity.Property(e => e.NumberOfFloor)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("number_of_floor");
 
                 entity.Property(e => e.Status)
                     .HasMaxLength(255)
@@ -327,9 +352,13 @@ namespace TodoApi
 
                 entity.HasIndex(e => e.UserId, "index_customers_on_user_id");
 
-                entity.Property(e => e.Id).HasColumnName("id");
+                entity.Property(e => e.Id)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("id");
 
-                entity.Property(e => e.AddressId).HasColumnName("address_id");
+                entity.Property(e => e.AddressId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("address_id");
 
                 entity.Property(e => e.CompanyContactName)
                     .HasMaxLength(255)
@@ -371,7 +400,9 @@ namespace TodoApi
                     .HasColumnType("datetime")
                     .HasColumnName("updated_at");
 
-                entity.Property(e => e.UserId).HasColumnName("user_id");
+                entity.Property(e => e.UserId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("user_id");
 
                 entity.HasOne(d => d.Address)
                     .WithMany(p => p.Customers)
@@ -392,13 +423,17 @@ namespace TodoApi
 
                 entity.HasIndex(e => e.ColumnId, "index_elevators_on_column_id");
 
-                entity.Property(e => e.Id).HasColumnName("id");
+                entity.Property(e => e.Id)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("id");
 
                 entity.Property(e => e.CertificateOfInspection)
                     .HasMaxLength(255)
                     .HasColumnName("certificate_of_inspection");
 
-                entity.Property(e => e.ColumnId).HasColumnName("column_id");
+                entity.Property(e => e.ColumnId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("column_id");
 
                 entity.Property(e => e.CreatedAt)
                     .HasColumnType("datetime")
@@ -449,7 +484,9 @@ namespace TodoApi
 
                 entity.HasIndex(e => e.UserId, "index_employees_on_user_id");
 
-                entity.Property(e => e.Id).HasColumnName("id");
+                entity.Property(e => e.Id)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("id");
 
                 entity.Property(e => e.CreatedAt)
                     .HasColumnType("datetime")
@@ -475,7 +512,9 @@ namespace TodoApi
                     .HasColumnType("datetime")
                     .HasColumnName("updated_at");
 
-                entity.Property(e => e.UserId).HasColumnName("user_id");
+                entity.Property(e => e.UserId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("user_id");
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.Employees)
@@ -483,11 +522,127 @@ namespace TodoApi
                     .HasConstraintName("fk_rails_dcfd3d4fc3");
             });
 
-            modelBuilder.Entity<Leads>(entity =>
+            modelBuilder.Entity<Intervention>(entity =>
+            {
+                entity.ToTable("interventions");
+
+                entity.HasIndex(e => e.BatteryId, "index_interventions_on_battery_id");
+
+                entity.HasIndex(e => e.BuildingId, "index_interventions_on_building_id");
+
+                entity.HasIndex(e => e.ColumnId, "index_interventions_on_column_id");
+
+                entity.HasIndex(e => e.CustomerId, "index_interventions_on_customer_id");
+
+                entity.HasIndex(e => e.ElevatorId, "index_interventions_on_elevator_id");
+
+                entity.HasIndex(e => e.EmployeeId, "index_interventions_on_employee_id");
+
+                entity.HasIndex(e => e.UserId, "index_interventions_on_user_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("id");
+
+                entity.Property(e => e.BatteryId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("battery_id");
+
+                entity.Property(e => e.BuildingId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("building_id");
+
+                entity.Property(e => e.ColumnId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("column_id");
+
+                entity.Property(e => e.CreatedAt)
+                    .HasColumnType("datetime")
+                    .HasColumnName("created_at");
+
+                entity.Property(e => e.CustomerId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("customer_id");
+
+                entity.Property(e => e.ElevatorId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("elevator_id");
+
+                entity.Property(e => e.EmployeeId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("employee_id");
+
+                entity.Property(e => e.InterventionEnd)
+                    .HasColumnType("datetime")
+                    .HasColumnName("intervention_end");
+
+                entity.Property(e => e.InterventionStart)
+                    .HasColumnType("datetime")
+                    .HasColumnName("intervention_start");
+
+                entity.Property(e => e.Report)
+                    .HasColumnType("text")
+                    .HasColumnName("report");
+
+                entity.Property(e => e.Result)
+                    .HasMaxLength(255)
+                    .HasColumnName("result");
+
+                entity.Property(e => e.Status)
+                    .HasMaxLength(255)
+                    .HasColumnName("status");
+
+                entity.Property(e => e.UpdatedAt)
+                    .HasColumnType("datetime")
+                    .HasColumnName("updated_at");
+
+                entity.Property(e => e.UserId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("user_id");
+
+                entity.HasOne(d => d.Battery)
+                    .WithMany(p => p.Interventions)
+                    .HasForeignKey(d => d.BatteryId)
+                    .HasConstraintName("fk_rails_268aede6d6");
+
+                entity.HasOne(d => d.Building)
+                    .WithMany(p => p.Interventions)
+                    .HasForeignKey(d => d.BuildingId)
+                    .HasConstraintName("fk_rails_911b4ef939");
+
+                entity.HasOne(d => d.Column)
+                    .WithMany(p => p.Interventions)
+                    .HasForeignKey(d => d.ColumnId)
+                    .HasConstraintName("fk_rails_d05fb241b3");
+
+                entity.HasOne(d => d.Customer)
+                    .WithMany(p => p.Interventions)
+                    .HasForeignKey(d => d.CustomerId)
+                    .HasConstraintName("fk_rails_4242c0f569");
+
+                entity.HasOne(d => d.Elevator)
+                    .WithMany(p => p.Interventions)
+                    .HasForeignKey(d => d.ElevatorId)
+                    .HasConstraintName("fk_rails_11b5a4bd36");
+
+                entity.HasOne(d => d.Employee)
+                    .WithMany(p => p.Interventions)
+                    .HasForeignKey(d => d.EmployeeId)
+                    .HasConstraintName("fk_rails_2e0d31b7ad");
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.Interventions)
+                    .HasForeignKey(d => d.UserId)
+                    .HasConstraintName("fk_rails_99380975b7");
+            });
+
+            modelBuilder.Entity<Lead>(entity =>
             {
                 entity.ToTable("leads");
 
-                entity.Property(e => e.Id).HasColumnName("id");
+                entity.Property(e => e.Id)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("id");
 
                 entity.Property(e => e.Attachment).HasColumnName("attachment");
 
@@ -544,7 +699,9 @@ namespace TodoApi
             {
                 entity.ToTable("quotes");
 
-                entity.Property(e => e.Id).HasColumnName("id");
+                entity.Property(e => e.Id)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("id");
 
                 entity.Property(e => e.AmountOfElevator)
                     .HasMaxLength(255)
@@ -655,7 +812,9 @@ namespace TodoApi
                 entity.HasIndex(e => e.ResetPasswordToken, "index_users_on_reset_password_token")
                     .IsUnique();
 
-                entity.Property(e => e.Id).HasColumnName("id");
+                entity.Property(e => e.Id)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("id");
 
                 entity.Property(e => e.CreatedAt)
                     .HasColumnType("datetime")

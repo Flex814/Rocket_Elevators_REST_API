@@ -3,13 +3,14 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace TodoApi
+namespace TodoApi.Models
 {
     public partial class Employee
     {
         public Employee()
         {
             Batteries = new HashSet<Battery>();
+            Interventions = new HashSet<Intervention>();
         }
 
         public long Id { get; set; }
@@ -23,5 +24,6 @@ namespace TodoApi
 
         public virtual User User { get; set; }
         public virtual ICollection<Battery> Batteries { get; set; }
+        public virtual ICollection<Intervention> Interventions { get; set; }
     }
 }

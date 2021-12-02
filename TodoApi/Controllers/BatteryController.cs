@@ -13,8 +13,8 @@ namespace TodoApi.Controllers
     [Route("[controller]")]
     public class BatteryController : Controller
     {
-        private readonly app_developmentContext _context;
-        public BatteryController(app_developmentContext context)
+        private readonly jacobgomezContext _context;
+        public BatteryController(jacobgomezContext context)
         {
             _context = context;
         }

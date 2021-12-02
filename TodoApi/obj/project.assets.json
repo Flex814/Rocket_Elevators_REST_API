@@ -9199,19 +9199,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\jakeg\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Rocket_Elevators_REST_API-main\\TodoApi\\TodoApi.csproj",
+      "projectUniqueName": "C:\\Users\\jakeg\\Source\\Repos\\Rocket_Elevators_REST_API\\TodoApi\\TodoApi.csproj",
       "projectName": "TodoApi",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\Rocket_Elevators_REST_API-main\\TodoApi\\TodoApi.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\Rocket_Elevators_REST_API-main\\TodoApi\\obj\\",
+      "projectPath": "C:\\Users\\jakeg\\Source\\Repos\\Rocket_Elevators_REST_API\\TodoApi\\TodoApi.csproj",
+      "packagesPath": "C:\\Users\\jakeg\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jakeg\\Source\\Repos\\Rocket_Elevators_REST_API\\TodoApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jakeg\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9298,7 +9298,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   },

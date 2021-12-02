@@ -13,8 +13,8 @@ namespace TodoApi.Controllers
     [Route("[controller]")]
     public class ColumnController : Controller
     {
-        private readonly app_developmentContext _context;
-        public ColumnController(app_developmentContext context)
+        private readonly jacobgomezContext _context;
+        public ColumnController(jacobgomezContext context)
         {
             _context = context;
         }
