@@ -856,3 +856,4 @@ C:\Users\jakeg\Desktop\Code\codeBox\Rocket_Elevators_REST_API\TodoApi\obj\Debug\
 C:\Users\jakeg\Desktop\Code\codeBox\Rocket_Elevators_REST_API\TodoApi\obj\Debug\net5.0\ref\TodoApi.dll
 C:\Users\jakeg\Desktop\Code\codeBox\Rocket_Elevators_REST_API\TodoApi\obj\Debug\net5.0\TodoApi.pdb
 C:\Users\jakeg\Desktop\Code\codeBox\Rocket_Elevators_REST_API\TodoApi\obj\Debug\net5.0\TodoApi.genruntimeconfig.cache
+C:\Users\jakeg\Desktop\Code\codeBox\Rocket_Elevators_REST_API\TodoApi\bin\Debug\net5.0\appsettings.json

@@ -3,8 +3,9 @@
     "",
     "\\TodoApi",
     "\\TodoApi\\Controllers",
-    "\\TodoApi\\Models"
+    "\\TodoApi\\Models",
+    "\\TodoApi\\Properties\\ServiceDependencies"
   ],
-  "SelectedNode": "\\TodoApi\\Models\\jacobgomezContext.cs",
+  "SelectedNode": "\\TodoApi\\TodoApi.sln",
   "PreviewInSolutionExplorer": false
 }

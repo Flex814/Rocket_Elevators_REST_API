@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "UL00OxHL8ygW3gEVrq1TNTFtfEyGowZE0ok1laO6epegC2ttbPXURNJ7UsZI6SFYA819S/wjDINyikVqWYX3nw==",
+  "dgSpecHash": "iEIMTvkkbDFz2uFXMpQDJu0iKfpzHIl2686FWcK3Cg6DEcm6V5uAF1J2rUnnyTKb55tXWeR+MZSbEndAHj0t1A==",
   "success": true,
   "projectFilePath": "C:\\Users\\jakeg\\Desktop\\Code\\codeBox\\Rocket_Elevators_REST_API\\TodoApi\\TodoApi.csproj",
   "expectedPackageFiles": [
@@ -176,7 +176,8 @@
     "C:\\Users\\jakeg\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\jakeg\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\jakeg\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\jakeg\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\jakeg\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\jakeg\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
   ],
   "logs": [
     {
