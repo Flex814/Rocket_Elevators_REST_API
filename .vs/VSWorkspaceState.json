@@ -5,6 +5,6 @@
     "\\TodoApi\\Controllers",
     "\\TodoApi\\Models"
   ],
-  "SelectedNode": "\\TodoApi\\TodoApi.sln",
+  "SelectedNode": "\\TodoApi\\Models\\jacobgomezContext.cs",
   "PreviewInSolutionExplorer": false
 }
