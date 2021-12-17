@@ -3,9 +3,8 @@
     "",
     "\\TodoApi",
     "\\TodoApi\\Controllers",
-    "\\TodoApi\\Models",
-    "\\TodoApi\\Properties\\ServiceDependencies"
+    "\\TodoApi\\Models"
   ],
-  "SelectedNode": "\\TodoApi\\TodoApi.sln",
+  "SelectedNode": "\\TodoApi\\Models\\Address.cs",
   "PreviewInSolutionExplorer": false
 }
