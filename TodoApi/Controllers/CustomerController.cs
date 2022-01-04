@@ -22,6 +22,20 @@ namespace TodoApi.Controllers
             return View();
         }
         [Produces("application/json")]
+        [HttpGet]
+        public async Task<IActionResult> FindAll()
+        {
+            try
+            {
+                var customer = _context.Customers.ToList();
+                return Ok(customer);
+            }
+            catch
+            {
+                return BadRequest();
+            }
+        }
+        [Produces("application/json")]
         [HttpGet("{email}")]
 
         public async Task<IActionResult> GetSpect(string email)
