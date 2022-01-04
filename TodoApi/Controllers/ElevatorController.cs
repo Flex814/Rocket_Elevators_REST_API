@@ -18,7 +18,7 @@ namespace TodoApi.Controllers
         {
             _context = context;
         }
-
+        //GET /Elevator
         [Produces("application/json")]
         [HttpGet]
         public async Task<IActionResult> FindAll()
@@ -33,7 +33,7 @@ namespace TodoApi.Controllers
                 return BadRequest();
             }
         }
-        
+        //GET /Elevator/id
         [Produces("application/json")]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetSpect(int id)
