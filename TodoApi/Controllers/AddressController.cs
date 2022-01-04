@@ -17,8 +17,21 @@ namespace TodoApi.Controllers
         {
             _context = context;
         }
-    
 
+        [Produces("application/json")]
+        [HttpGet]
+        public async Task<IActionResult> FindAll()
+        {
+            try
+            {
+                var address = _context.Addresses.ToList();
+                return Ok(address);
+            }
+            catch
+            {
+                return BadRequest();
+            }
+        }
 
         [Produces("application/json")]
         [HttpGet("{email}")]
