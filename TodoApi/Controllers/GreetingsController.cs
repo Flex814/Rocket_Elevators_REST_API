@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using TodoApi.Models;
 namespace TodoApi.Controllers
 {
-    [ApiController]
     [Route("[controller]")]
+    [ApiController]
     public class GreetingsController : Controller
     {
         // GET: /<controller>/
@@ -19,10 +19,7 @@ namespace TodoApi.Controllers
         {
             _context = context;
         }
-        public IActionResult Index()
-        {
-            return View();
-        }
+        
         [HttpGet]
 
         public string Greeting()
@@ -44,8 +41,5 @@ namespace TodoApi.Controllers
 
                 return greeting;
         }
-
-
-
     }
 }
