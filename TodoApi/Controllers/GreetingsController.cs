@@ -34,7 +34,7 @@ namespace TodoApi.Controllers
             int inactiveElevators = _context.Elevators.Where(elevator => elevator.Status != "Active").Count();
 
             string greeting = "Greetings. There are currently " + totalElevators + " elevators deployed in the " + totalBuildings + " buildings of your " + totalCustomers + " customers." +
-                " Currently, " + totalElevators + " elevators are not in Running Status and are being serviced. " +
+                " Currently, " + inactiveElevators + " elevators are not in Running Status and are being serviced. " +
                 totalBatteries + " batteries are deployed across " + totalCities + " cities. " +
                 " On another note, you currently have " + totalQuotes + " quotes awaiting processing. " +
                 " You also have " + totalLeads + " leads in your contact requests. ";
