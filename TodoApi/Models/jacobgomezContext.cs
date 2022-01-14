@@ -37,7 +37,7 @@ namespace TodoApi.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseMySql("server=codeboxx.cq6zrczewpu2.us-east-1.rds.amazonaws.com;port=3306;database=jacobgomez;uid=codeboxx;password=Codeboxx1!", Microsoft.EntityFrameworkCore.ServerVersion.Parse("5.7.33-mysql"));
+                optionsBuilder.UseMySql("server=db-mysql-nyc3-71084-do-user-10617408-0.b.db.ondigitalocean.com;port=25060;database=defaultdb;uid=doadmin;password=bPNLOrV8PzDPtagv", Microsoft.EntityFrameworkCore.ServerVersion.Parse("5.7.33-mysql"));
             }
         }
 
